@@ -8,42 +8,70 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
+  <main>
+  
+    <div class="rating-card">
+    
+      <img src="./images/icon-star.svg" alt="star-icon" class="star-icon">
+      <h2>How did we do?</h2>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      <form id="rating">
+        <fieldset>
+          <label for="one" class="radio">
+            <input type="radio" name="rating" id="one" value="1" class="radio-input">
+            <div class="radio-radio"><p>1</p></div>
+          </label>
+          <label for="two" class="radio">
+            <input type="radio" name="rating" id="two" value="2" class="radio-input">
+            <div class="radio-radio"><p>2</p></div>
+          </label>
+          <label for="three" class="radio">
+            <input type="radio" name="rating" id="three" value="3" class="radio-input">
+            <div class="radio-radio"><p>3</p></div>
+          </label>
+          <label for="four" class="radio">
+            <input type="radio" name="rating" id="four" value="4" class="radio-input">
+            <div class="radio-radio"><p>4</p></div>
+          </label>
+          <label for="five" class="radio">
+            <input type="radio" name="rating" id="five" value="5" class="radio-input">
+            <div class="radio-radio"><p>5</p></div>
+          </label>
+        </fieldset>
+        <div class="alert"><p>Please select a number</p></div>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
+  <div class="thank-you-card">
+    <img src="./images/illustration-thank-you.svg" alt="">
+    <p class="show-rating">You selected <span class="rating-display"><!-- Add rating here --></span> out of 5</p>
+    
 
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <h2>Thank you!</h2>
+  <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p>
   </div>
+  <!-- Thank you state end -->
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://carloscastillo.dev/" target="_blank">Carlos Castillo</a>.
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
